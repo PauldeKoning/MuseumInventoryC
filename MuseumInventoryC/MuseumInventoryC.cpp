@@ -1,8 +1,9 @@
 // MuseumInventoryC.cpp : This file contains the 'main' function. Program execution begins and ends there.
 //
 
+#include "Home.h"
 #include <iostream>
-#include "home.h"
+#include "Item.h"
 
 int main()
 {

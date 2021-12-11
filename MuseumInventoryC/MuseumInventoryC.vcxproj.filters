@@ -42,9 +42,21 @@
     <ClCompile Include="LinkedNode.cpp">
       <Filter>Source Files\LinkedList</Filter>
     </ClCompile>
+    <ClCompile Include="ItemTools.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="BinaryQuestion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="NoteQuestion.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Inspect.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="home.h">
+    <ClInclude Include="Home.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="Item.h">
@@ -61,6 +73,18 @@
     </ClInclude>
     <ClInclude Include="LinkedNode.h">
       <Filter>Header Files\LinkedList</Filter>
+    </ClInclude>
+    <ClInclude Include="ItemTools.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BinaryQuestion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="NoteQuestion.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Inspect.h">
+      <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
 </Project>

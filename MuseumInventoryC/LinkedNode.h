@@ -1,9 +1,10 @@
+#include "Question.h"
+
 #pragma once
-template <typename T>
 class LinkedNode
 {
 public:
-	T data;
-	LinkedNode next;
+	Question* data = 0;
+	LinkedNode* next = 0;
 };
 

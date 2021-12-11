@@ -139,20 +139,28 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="BinaryQuestion.cpp" />
     <ClCompile Include="Home.cpp" />
+    <ClCompile Include="Inspect.cpp" />
     <ClCompile Include="Inspection.cpp" />
     <ClCompile Include="Item.cpp" />
+    <ClCompile Include="ItemTools.cpp" />
     <ClCompile Include="LinkedListQueue.cpp" />
     <ClCompile Include="LinkedNode.cpp" />
     <ClCompile Include="MuseumInventoryC.cpp" />
+    <ClCompile Include="NoteQuestion.cpp" />
     <ClCompile Include="Question.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="home.h" />
+    <ClInclude Include="BinaryQuestion.h" />
+    <ClInclude Include="Home.h" />
+    <ClInclude Include="Inspect.h" />
     <ClInclude Include="Inspection.h" />
     <ClInclude Include="Item.h" />
+    <ClInclude Include="ItemTools.h" />
     <ClInclude Include="LinkedListQueue.h" />
     <ClInclude Include="LinkedNode.h" />
+    <ClInclude Include="NoteQuestion.h" />
     <ClInclude Include="Question.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

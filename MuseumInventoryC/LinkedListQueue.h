@@ -1,42 +1,62 @@
 #pragma once
 
-#include "LinkedNode.h";
-template <typename T>
+#include <iostream>
+#include "LinkedNode.h"
 class LinkedListQueue
 {
 private:
-	int size = 0;
-	LinkedNode<T> head;
-	LinkedNode<T> tail;
+	int size;
+	LinkedNode* head;
+	LinkedNode* tail;
 public:
-	T peek() 
+	void enqueue(Question* item)
 	{
-		return &this->head;
-	}
+		LinkedNode* node = new LinkedNode();
+		node->data = item;
 
-	void enqueue(T item)
-	{
-		this->tail->next = item;
-		this->tail = this->tail->next;
+		if (this->size == 0)
+		{
+			this->head = node;
+			this->tail = node;
+		}
+		else
+		{
+			this->tail->next = node;
+			this->tail = node;
+		}
+
 		this->size++;
 	}
 
-	T dequeue()
+	Question* dequeue()
 	{
 		if (this->size == 0)
 		{
-			return 0;
+			return NULL;
 		}
 
-		LinkedNode temp = &this->head;
-		this->head = this->head.next;
+		Question* question = this->head->data;
+		this->head = this->head->next;
 
 		this->size--;
+
+		return question;
 	}
 
 	int count()
 	{
 		return this->size;
+	}
+
+	void createQuestionsArr(Question**& arr, int& size)
+	{
+		arr = new Question*[this->size];
+		size = this->size;
+		for (int i = 0; i < this->size; i++)
+		{
+			arr[i] = dequeue();
+			enqueue(arr[i]);
+		}
 	}
 };
 
