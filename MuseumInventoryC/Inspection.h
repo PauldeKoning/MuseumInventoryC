@@ -21,8 +21,5 @@ public:
 		questions.enqueue(question2);
 		questions.enqueue(question3);
 	}
-
-
-
 };
 

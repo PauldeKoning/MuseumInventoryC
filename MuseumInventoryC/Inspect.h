@@ -8,28 +8,33 @@ private:
 
 	void printQuestions()
 	{
+		// Create a pointer of a question pointer and an array size value
 		Question** arr = NULL;
 		int sizeArr;
 
+		// Pass the pointer and int to function that initializes an array and returns size
 		item.inspection.questions.createQuestionsArr(arr, sizeArr);
 
+		// Loop over the array and print a summary of questions
 		for (int i = 0; i < sizeArr; i++)
 		{
 			std::cout << arr[i]->question << " - " << arr[i]->answer << "\n";
 		}
-
 	}
 
 	void answerQuestions()
 	{
+		// Return if there are no questions in the list
 		if (item.inspection.questions.count() == 0) return;
 
 		while (true)
 		{
+			// Get question and ask for answer
 			Question* question = item.inspection.questions.dequeue();;
 			question->getUserAnswer();
 			item.inspection.questions.enqueue(question);
 
+			// Ask whether the user would like to continue
 			std::cout << "Would you like to continue? [Y/n]\n";
 
 			char option;
@@ -43,16 +48,21 @@ private:
 
 	void answerQuestions(bool unanswered)
 	{
+		// Return if there are no questions in the list
 		if (item.inspection.questions.count() == 0) return;
+
+		// Loop through the questions. Quit when no unanswered questions are found.
 		int failed = 0;
-		while (true && failed <= item.inspection.questions.count())
+		while (failed <= item.inspection.questions.count())
 		{
+			// Remove one question from the queue
 			Question* question = item.inspection.questions.dequeue();;
 			if (unanswered && question->answer == "")
 			{
+				// Get answer
 				question->getUserAnswer();
 				item.inspection.questions.enqueue(question);
-
+				// Check whether the user would like to continue looping through unanswered questions
 				std::cout << "Would you like to continue? [Y/n]\n";
 
 				char option;
@@ -65,6 +75,7 @@ private:
 			}
 			else
 			{
+				// If item is answered, enqueue item again and increase 'failed' loop
 				item.inspection.questions.enqueue(question);
 				failed++;
 			}

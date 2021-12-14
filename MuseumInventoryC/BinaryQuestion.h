@@ -6,7 +6,7 @@ class BinaryQuestion : public Question
 protected:
 	bool validateUserInput(std::string input)
 	{
-		return input == "yes" || input == "no";
+		return input == "yes" || input == "no"; // Allow only yes and no
 	}
 public:
 	BinaryQuestion(std::string name, std::string question)

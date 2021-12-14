@@ -8,12 +8,12 @@
 class Home
 {
 private:
-	Item items[20];
+	Item items[100];
 	ItemTools tools;
 
 	void createItem(Item item)
 	{
-		if (this->size == 20)
+		if (this->size == 100)
 		{
 			std::cout << "Maximum item count reached, cannot add more!\n";
 			return;
@@ -96,40 +96,6 @@ public:
 
 	void show() 
 	{
-		Item temp;
-		temp.name = "test";
-		createItem(temp);
-		/*
-		for (int i = 0; i < 15; i++) 
-		{
-			Item temp;
-			std::string str = "test12";
-			temp.name = str;
-			this->createItem(temp);
-		}
-		
-		Item test = getItem("test\x1/dsadd");
-
-		Item temp;
-		temp.name = "test1";
-
-
-		Question question1;
-		question1.name = "hello";
-		Question question2;
-		question2.name = "hello2";
-
-		Inspection ins = temp.inspection;
-
-		ins.questions.enqueue(question1);
-		ins.questions.enqueue(question2);
-		int count1 = ins.questions.count();
-
-		Question dequeue1;
-		ins.questions.dequeue(dequeue1);
-
-		*/
-
 		while (true)
 		{
 			std::cout << "Welcome to the museum inventory software. Please type an option to continue:\n";
